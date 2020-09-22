@@ -19,7 +19,11 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
 
     public static void main(String[] args){
-        //DobbeltLenketListe<String> liste = new DobbeltLenketListe<>();
+        String[] strings = {"-kd","pe", "dt"};
+        DobbeltLenketListe<String> liste = new DobbeltLenketListe<>(strings);
+
+        System.out.println(liste.hale.forrige);
+        System.out.println(liste.hale.neste);
     }
 
     /**
@@ -42,7 +46,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     // instansvariabler
-    private Node<T> hode;          // peker til den første i listen
+    public Node<T> hode;          // peker til den første i listen
     private Node<T> hale;          // peker til den siste i listen
     private int antall;            // antall noder i listen
     private int endringer;         // antall endringer i listen
@@ -52,7 +56,21 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     public DobbeltLenketListe(T[] a) {
-        throw new UnsupportedOperationException();
+        if(a == null)
+            throw new NullPointerException("Tabellen a er null!");
+
+        hode = new Node<T>(a[0], null, null);
+        Node<T> currentNode = hode;
+        Node<T> previousNode = null;
+        hode.forrige = previousNode;
+        for(int i = 1; i < a.length; i++){
+            currentNode.neste = new Node<T>(a[i],null, null);
+            currentNode.forrige = previousNode;
+            previousNode = currentNode;
+
+                currentNode = currentNode.neste;
+        }
+        hale = new Node<T>(currentNode.verdi, previousNode, null);
     }
 
     public Liste<T> subliste(int fra, int til){

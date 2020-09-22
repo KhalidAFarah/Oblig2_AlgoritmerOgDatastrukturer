@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a926081-32a3-454e-9591-09ddfcaedea0" name="Default Changelist" comment="Oppgave 0 ferdig">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600771135175</updated>
-      <workItem from="1600771136515" duration="2704000" />
+      <workItem from="1600771136515" duration="5160000" />
     </task>
     <servers />
   </component>
@@ -87,5 +105,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
