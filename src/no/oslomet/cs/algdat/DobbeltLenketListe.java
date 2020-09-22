@@ -19,11 +19,10 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
 
     public static void main(String[] args){
-        String[] strings = {"-kd","pe", "dt"};
+        String[] strings = {"kd","pe", "dt"};
         DobbeltLenketListe<String> liste = new DobbeltLenketListe<>(strings);
 
-        System.out.println(liste.hale.forrige);
-        System.out.println(liste.hale.neste);
+        //System.out.println(liste.hode.neste);
     }
 
     /**
@@ -52,25 +51,37 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     private int endringer;         // antall endringer i listen
 
     public DobbeltLenketListe() {
-        throw new UnsupportedOperationException();
+        //throw new UnsupportedOperationException();
+        //this((T[]) new  Object[10]);
     }
 
     public DobbeltLenketListe(T[] a) {
-        if(a == null)
+        if (a == null)
             throw new NullPointerException("Tabellen a er null!");
-
-        hode = new Node<T>(a[0], null, null);
-        Node<T> currentNode = hode;
-        Node<T> previousNode = null;
-        hode.forrige = previousNode;
-        for(int i = 1; i < a.length; i++){
-            currentNode.neste = new Node<T>(a[i],null, null);
-            currentNode.forrige = previousNode;
-            previousNode = currentNode;
-
-                currentNode = currentNode.neste;
+        else if (a.length > 0) {
+            boolean first = true;
+            antall = 0;
+            int i = 0;for(; first && i < a.length; i++){
+                if(a[i] != null && first){
+                    hode = new Node<>(a[i], null, null);
+                    antall++;
+                    first = false;
+                }
+            }
+            Node<T> CurrentNode = hode;
+            Node<T> PreviousNode = hode;
+            for(; i < a.length; i++){
+                if(a[i] != null){
+                    CurrentNode.neste = new Node<>(a[i], PreviousNode, null);
+                    PreviousNode = CurrentNode;
+                    CurrentNode = CurrentNode.neste;
+                    CurrentNode.forrige = PreviousNode;
+                    antall++;
+                }
+            }
+            hale = CurrentNode;
         }
-        hale = new Node<T>(currentNode.verdi, previousNode, null);
+
     }
 
     public Liste<T> subliste(int fra, int til){
