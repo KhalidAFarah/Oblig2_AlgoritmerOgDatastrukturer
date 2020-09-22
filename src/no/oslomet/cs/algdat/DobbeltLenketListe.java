@@ -17,6 +17,11 @@ import java.util.function.Predicate;
 
 public class DobbeltLenketListe<T> implements Liste<T> {
 
+
+    public static void main(String[] args){
+        //DobbeltLenketListe<String> liste = new DobbeltLenketListe<>();
+    }
+
     /**
      * Node class
      * @param <T>
