@@ -22,7 +22,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         String[] strings = {"kd","pe", "dt"};
         DobbeltLenketListe<String> liste = new DobbeltLenketListe<>(strings);
 
-        //System.out.println(liste.hode.neste);
+        System.out.println(liste);
     }
 
     /**
@@ -143,7 +143,19 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public String toString() {
-        
+        StringBuilder ut = new StringBuilder();
+
+        ut.append("[" + hode.verdi);
+        Node<T> currentNode = hode;
+        for(int i = 0; i <= antall; i++){
+            if(currentNode.neste != null){
+                currentNode = currentNode.neste;
+                ut.append(", " + currentNode.verdi);
+            }
+        }
+        ut.append("]");
+
+        return ut.toString();
     }
 
     public String omvendtString() {

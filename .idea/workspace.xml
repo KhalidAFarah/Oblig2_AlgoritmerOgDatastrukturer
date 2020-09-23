@@ -38,6 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -55,7 +56,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DobbeltLenketListeTest.oppgave1">
+  <component name="RunManager" selected="Application.DobbeltLenketListe">
     <configuration name="DobbeltLenketListe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListe" />
       <module name="Oblig2" />
@@ -87,8 +88,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave1" />
         <item itemvalue="Application.DobbeltLenketListe" />
+        <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave1" />
       </list>
     </recent_temporary>
   </component>
@@ -103,7 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600771135175</updated>
       <workItem from="1600771136515" duration="12062000" />
-      <workItem from="1600849310737" duration="425000" />
+      <workItem from="1600849310737" duration="1687000" />
     </task>
     <servers />
   </component>
