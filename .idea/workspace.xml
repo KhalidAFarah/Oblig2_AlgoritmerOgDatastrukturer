@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a926081-32a3-454e-9591-09ddfcaedea0" name="Default Changelist" comment="Oppgave 0 ferdig">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +102,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600771135175</updated>
-      <workItem from="1600771136515" duration="11307000" />
+      <workItem from="1600771136515" duration="12062000" />
+      <workItem from="1600849310737" duration="425000" />
     </task>
     <servers />
   </component>
@@ -117,7 +115,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -130,11 +130,6 @@
           <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java</url>
           <line>90</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
