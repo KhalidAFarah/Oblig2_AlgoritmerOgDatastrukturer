@@ -116,6 +116,9 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
 
     }
+    private Node<T> finnNode(int index){
+        
+    }
 
     public Liste<T> subliste(int fra, int til){
         throw new UnsupportedOperationException();
