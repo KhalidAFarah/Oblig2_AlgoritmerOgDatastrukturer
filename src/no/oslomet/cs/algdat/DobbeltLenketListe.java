@@ -117,7 +117,19 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     }
     private Node<T> finnNode(int index){
-        
+        if(index <= antall/2){
+            Node<T> currentNode = hode;
+            for(int i = 0; i <= index; i++){
+                currentNode = currentNode.neste;
+            }
+            return currentNode;
+        }else{
+            Node<T> currentNode = hale;
+            for(int i = antall; i >= index; i++){
+                currentNode = currentNode.forrige;
+            }
+            return currentNode;
+        }
     }
 
     public Liste<T> subliste(int fra, int til){
