@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a926081-32a3-454e-9591-09ddfcaedea0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +122,7 @@
       <updated>1600771135175</updated>
       <workItem from="1600771136515" duration="12062000" />
       <workItem from="1600849310737" duration="5456000" />
-      <workItem from="1600936170597" duration="2300000" />
+      <workItem from="1600936170597" duration="3221000" />
     </task>
     <servers />
   </component>
