@@ -20,7 +20,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     public static void main(String[] args){
         String[] strings = {"kd","pe", "dt"};
-        DobbeltLenketListe<String> liste = new DobbeltLenketListe<>(strings);
+        DobbeltLenketListe<String> liste = new DobbeltLenketListe<>();
         System.out.println(liste.antall() + " " + liste.tom());
         // Utskrift: 3 false
 
@@ -148,14 +148,18 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     @Override
     public String toString() {
         StringBuilder ut = new StringBuilder();
+        if(hode != null) {
+            ut.append("[" + hode.verdi);
 
-        ut.append("[" + hode.verdi);
         Node<T> currentNode = hode;
         for(int i = 0; i <= antall; i++){
             if(currentNode.neste != null){
                 currentNode = currentNode.neste;
                 ut.append(", " + currentNode.verdi);
             }
+        }
+        }else{
+            ut.append("[");
         }
         ut.append("]");
 
@@ -164,14 +168,18 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     public String omvendtString() {
         StringBuilder ut = new StringBuilder();
+        if(hale != null) {
+            ut.append("[" + hale.verdi);
 
-        ut.append("[" + hale.verdi);
-        Node<T> currentNode = hale;
-        for(int i = antall; i >= 0; i--){
-            if(currentNode.forrige != null){
-                currentNode = currentNode.forrige;
-                ut.append(", " + currentNode.verdi);
+            Node<T> currentNode = hale;
+            for (int i = antall; i >= 0; i--) {
+                if (currentNode.forrige != null) {
+                    currentNode = currentNode.forrige;
+                    ut.append(", " + currentNode.verdi);
+                }
             }
+        }else{
+            ut.append("[");
         }
         ut.append("]");
 
