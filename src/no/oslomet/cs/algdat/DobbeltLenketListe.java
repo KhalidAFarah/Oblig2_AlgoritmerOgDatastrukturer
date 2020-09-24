@@ -21,8 +21,12 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     public static void main(String[] args){
         String[] strings = {"kd","pe", "dt"};
         DobbeltLenketListe<String> liste = new DobbeltLenketListe<>(strings);
+        System.out.println(liste.antall() + " " + liste.tom());
+        // Utskrift: 3 false
+
 
         System.out.println(liste);
+        System.out.println(liste.omvendtString());
     }
 
     /**
@@ -159,7 +163,19 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     }
 
     public String omvendtString() {
-        throw new UnsupportedOperationException();
+        StringBuilder ut = new StringBuilder();
+
+        ut.append("[" + hale.verdi);
+        Node<T> currentNode = hale;
+        for(int i = antall; i >= 0; i--){
+            if(currentNode.forrige != null){
+                currentNode = currentNode.forrige;
+                ut.append(", " + currentNode.verdi);
+            }
+        }
+        ut.append("]");
+
+        return ut.toString();
     }
 
     @Override
