@@ -4,13 +4,8 @@ package no.oslomet.cs.algdat;
 ////////////////// class DobbeltLenketListe //////////////////////////////
 
 
-import java.util.Comparator;
-import java.util.ConcurrentModificationException;
-import java.util.NoSuchElementException;
-import java.util.StringJoiner;
+import java.util.*;
 
-import java.util.Iterator;
-import java.util.Objects;
 import java.util.function.Predicate;
 
 
@@ -62,7 +57,12 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         System.out.println(list.subliste(3,8)); // [D, E, F, G, H]
         System.out.println(list.subliste(5,5)); // []
         System.out.println(list.subliste(8,list.antall())); // [I, J]
-        System.out.println(liste.subliste(0,11)); // skal kaste unntak
+        //System.out.println(liste.subliste(0,11)); // skal kaste unntak
+
+        System.out.println("-------------");
+        System.out.println(liste5.toString());
+        liste5.leggInn(2, 4);
+        System.out.println(liste5.toString());
 
 
     }
@@ -188,31 +188,38 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public void leggInn(int indeks, T verdi) {
-        indeksKontroll(indeks, false);
-        Objects.requireNonNull(verdi);
+        if(verdi == null)
+            throw new NullPointerException("Oppgitt kan ikke være null!");
 
-        if(tom()) {
-            leggInn(verdi);
-            antall++;
-            endringer++;
-        }else if(indeks == 0){
-            Node<T> newNode = new Node<>(verdi, null, hode);
-            hode = newNode;
-            antall++;
-            endringer++;
-        }else if(indeks == antall-1){
-            Node<T> newNode = new Node<>(verdi, hale, null);
-            hale = newNode;
-            antall++;
-            endringer++;
-        }else{
-            Node<T> nextNode = finnNode(indeks);
-            Node<T> previousNode = nextNode.forrige;
-            Node<T> currentNode = new Node<T>(verdi, previousNode, nextNode);
-            previousNode.neste = currentNode;
-            nextNode.forrige = currentNode;
-            antall++;
-            endringer++;
+
+        if(indeks >= 0 && indeks <= antall) {
+            if(!tom()) {
+                if (indeks == 0) {
+                    Node<T> newNode = new Node<>(verdi, null, hode);
+                    hode.forrige = newNode;
+                    hode = newNode;
+                    antall++;
+                    endringer++;
+                } else if (indeks == antall) {
+                    Node<T> newNode = new Node<>(verdi, hale, null);
+                    hale.neste = newNode;
+                    hale = newNode;
+                    antall++;
+                    endringer++;
+                } else {
+                    Node<T> nextNode = finnNode(indeks);
+                    Node<T> previousNode = nextNode.forrige;
+                    Node<T> currentNode = new Node<T>(verdi, previousNode, nextNode);
+                    previousNode.neste = currentNode;
+                    nextNode.forrige = currentNode;
+                    antall++;
+                    endringer++;
+                }
+            }else{
+                leggInn(verdi);
+            }
+        }else {
+            throw new IndexOutOfBoundsException("Indexen oppgitt er i tillat!");
         }
 
     }

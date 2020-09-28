@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8a926081-32a3-454e-9591-09ddfcaedea0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +74,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DobbeltLenketListeTest.oppgave2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DobbeltLenketListeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Oblig2" />
       <extension name="coverage">
         <pattern>
@@ -80,8 +84,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat" />
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListeTest" />
-      <option name="METHOD_NAME" value="oppgave2" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,10 +140,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave5" />
+        <item itemvalue="Application.DobbeltLenketListe" />
+        <item itemvalue="JUnit.DobbeltLenketListeTest" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave4" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave3" />
-        <item itemvalue="Application.DobbeltLenketListe" />
-        <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave2" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +160,7 @@
       <workItem from="1600771136515" duration="12062000" />
       <workItem from="1600849310737" duration="5456000" />
       <workItem from="1600936170597" duration="5183000" />
-      <workItem from="1601274937910" duration="6381000" />
+      <workItem from="1601274937910" duration="12042000" />
     </task>
     <servers />
   </component>
@@ -176,5 +179,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java</url>
+          <line>631</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
