@@ -217,6 +217,8 @@ public class DobbeltLenketListe<T> implements Liste<T> {
                 }
             }else{
                 leggInn(verdi);
+                antall++;
+                endringer++;
             }
         }else {
             throw new IndexOutOfBoundsException("Indexen oppgitt er i tillat!");
