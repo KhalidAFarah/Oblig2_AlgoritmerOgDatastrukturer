@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe$DobbeltLenketListeIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Oblig2/no/oslomet/cs/algdat/DobbeltLenketListeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DobbeltLenketListeTest.oppgave3">
+  <component name="RunManager" selected="JUnit.DobbeltLenketListeTest.oppgave4">
     <configuration name="DobbeltLenketListe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListe" />
       <module name="Oblig2" />
@@ -122,8 +120,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DobbeltLenketListeTest.oppgave4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Oblig2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.oslomet.cs.algdat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat" />
+      <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListeTest" />
+      <option name="METHOD_NAME" value="oppgave4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave4" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave3" />
         <item itemvalue="Application.DobbeltLenketListe" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave2" />
@@ -144,7 +159,7 @@
       <workItem from="1600771136515" duration="12062000" />
       <workItem from="1600849310737" duration="5456000" />
       <workItem from="1600936170597" duration="5183000" />
-      <workItem from="1601274937910" duration="3885000" />
+      <workItem from="1601274937910" duration="4851000" />
     </task>
     <servers />
   </component>

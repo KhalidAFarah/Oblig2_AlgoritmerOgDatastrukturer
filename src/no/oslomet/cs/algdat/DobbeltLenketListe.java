@@ -193,7 +193,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public boolean inneholder(T verdi) {
-        throw new UnsupportedOperationException();
+        return indeksTil(verdi) != -1;
     }
 
     private Node<T> finnNode(int index){
@@ -228,7 +228,18 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public int indeksTil(T verdi) {
-        throw new UnsupportedOperationException();
+        Node<T> currentNode = hode;
+        int indeks = 0;
+
+        while(currentNode != null){
+            if(currentNode.verdi.equals(verdi))
+                return indeks;
+
+            currentNode = currentNode.neste;
+            indeks++;
+        }
+
+        return -1;
     }
 
     @Override
