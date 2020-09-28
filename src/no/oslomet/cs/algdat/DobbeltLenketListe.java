@@ -193,18 +193,26 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
         if(tom()) {
             leggInn(verdi);
+            antall++;
+            endringer++;
         }else if(indeks == 0){
             Node<T> newNode = new Node<>(verdi, null, hode);
             hode = newNode;
+            antall++;
+            endringer++;
         }else if(indeks == antall-1){
             Node<T> newNode = new Node<>(verdi, hale, null);
             hale = newNode;
+            antall++;
+            endringer++;
         }else{
             Node<T> nextNode = finnNode(indeks);
             Node<T> previousNode = nextNode.forrige;
             Node<T> currentNode = new Node<T>(verdi, previousNode, nextNode);
             previousNode.neste = currentNode;
             nextNode.forrige = currentNode;
+            antall++;
+            endringer++;
         }
 
     }
