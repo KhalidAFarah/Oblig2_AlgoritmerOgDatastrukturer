@@ -616,7 +616,7 @@ class DobbeltLenketListeTest {
                     ("Oppgave 5g: Feil i indekssjekken! 0 <= indeks <= antall er tillatt!");
 
             antallFeil++;
-            //return;
+            return;
         }
 
         liste = new DobbeltLenketListe<>();
