@@ -58,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DobbeltLenketListeTest.oppgave3">
+  <component name="RunManager" selected="Application.DobbeltLenketListe">
     <configuration name="DobbeltLenketListe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListe" />
       <module name="Oblig2" />
@@ -122,10 +122,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DobbeltLenketListe" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave3" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave2" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave1" />
-        <item itemvalue="Application.DobbeltLenketListe" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +142,7 @@
       <workItem from="1600771136515" duration="12062000" />
       <workItem from="1600849310737" duration="5456000" />
       <workItem from="1600936170597" duration="5183000" />
-      <workItem from="1601274937910" duration="246000" />
+      <workItem from="1601274937910" duration="1869000" />
     </task>
     <servers />
   </component>
@@ -161,5 +161,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java</url>
+          <line>283</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

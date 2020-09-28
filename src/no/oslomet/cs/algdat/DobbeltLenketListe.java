@@ -56,6 +56,15 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         // [1, 2] [2, 1]
         // [1, 2, 3] [3, 2, 1]
 
+        System.out.println("-----------------------");
+        Character[] c = {'A','B','C','D','E','F','G','H','I','J',};
+        DobbeltLenketListe<Character> list = new DobbeltLenketListe<>(c);
+        System.out.println(list.subliste(3,8)); // [D, E, F, G, H]
+        System.out.println(list.subliste(5,5)); // []
+        System.out.println(list.subliste(8,list.antall())); // [I, J]
+        System.out.println(liste.subliste(0,11)); // skal kaste unntak
+
+
     }
 
     /**
@@ -117,8 +126,34 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     }
 
+    private static void fratilKontroll(int tablengde, int fra, int til)
+    {
+        if (fra < 0)                                  // fra er negativ
+            throw new IndexOutOfBoundsException
+                    ("fra(" + fra + ") er negativ!");
+
+        if (til > tablengde)                          // til er utenfor tabellen
+            throw new IndexOutOfBoundsException
+                    ("til(" + til + ") > tablengde(" + tablengde + ")");
+
+        if (fra > til)                                // fra er større enn til
+            throw new IllegalArgumentException
+                    ("fra(" + fra + ") > til(" + til + ") - illegalt intervall!");
+    }
+
     public Liste<T> subliste(int fra, int til){
-        throw new UnsupportedOperationException();
+        fratilKontroll(antall, fra, til);
+
+        DobbeltLenketListe<T> subliste = new DobbeltLenketListe<>();
+        Node<T> currentNode = hode;
+        for(int i = 0; i < antall; i++){
+            if(fra <= i && i < til) {
+                subliste.leggInn(currentNode.verdi);
+            }
+
+            currentNode = currentNode.neste;
+        }
+        return subliste;
     }
 
     @Override
@@ -165,14 +200,14 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         if(index <= antall/2){
             Node<T> currentNode = hode;
             for(int i = 0; i <= index; i++){
-                if(currentNode != null)
+                if(currentNode.neste != null)
                 currentNode = currentNode.neste;
             }
             return currentNode;
         }else{
             Node<T> currentNode = hale;
             for(int i = antall; i >= index; i++){
-                if(currentNode != null)
+                if(currentNode.forrige != null)
                 currentNode = currentNode.forrige;
             }
             return currentNode;
