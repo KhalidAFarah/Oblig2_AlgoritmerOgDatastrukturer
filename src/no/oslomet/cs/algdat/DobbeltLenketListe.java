@@ -134,7 +134,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
         if (til > tablengde)                          // til er utenfor tabellen
             throw new IndexOutOfBoundsException
-                    ("til(" + til + ") > tablengde(" + tablengde + ")");
+                    ("til(" + til + ") > antall(" + tablengde + ")");
 
         if (fra > til)                                // fra er større enn til
             throw new IllegalArgumentException
@@ -198,15 +198,21 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     private Node<T> finnNode(int index){
         if(index <= antall/2){
+            if(index == 0)
+                return hode;
+
             Node<T> currentNode = hode;
-            for(int i = 0; i <= index; i++){
+            for(int i = 0; i < index; i++){
                 if(currentNode.neste != null)
                 currentNode = currentNode.neste;
             }
             return currentNode;
         }else{
+            if(index == antall-1)
+                return hale;
+
             Node<T> currentNode = hale;
-            for(int i = antall; i >= index; i++){
+            for(int i = antall; i >= index; i--){
                 if(currentNode.forrige != null)
                 currentNode = currentNode.forrige;
             }
@@ -234,7 +240,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
             endringer++;
             return gammelVerdi;
         }else
-            return null;
+            throw new NullPointerException("ny verdi kan ikke være null");
     }
 
     @Override
