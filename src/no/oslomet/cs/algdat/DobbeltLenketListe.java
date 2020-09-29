@@ -65,9 +65,15 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         System.out.println(liste5.toString());
 
         System.out.println("------------------------------");
-        String[] s = {};
-        Liste<String> l = new DobbeltLenketListe<>(s);
-        l.fjern("");
+        String[] navn = {"Lars","Anders","Bodil","Kari","Per","Berit"};
+        Liste<String> navnListe = new DobbeltLenketListe<>(navn);
+        navnListe.forEach(s -> System.out.print(s + " "));
+        System.out.println();
+        for (String s : navnListe) System.out.print(s + " ");
+        // Utskrift:
+        // Lars Anders Bodil Kari Per Berit
+        // Lars Anders Bodil Kari Per Berit
+
 
 
     }
@@ -473,8 +479,9 @@ public class DobbeltLenketListe<T> implements Liste<T> {
                 throw new NoSuchElementException("Der er ikke noen neste verdier");
 
             fjernOK = true;
+            T temp = denne.verdi;
             denne = denne.neste;
-            return denne.verdi;
+            return temp;
         }
 
         @Override
