@@ -95,12 +95,17 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     public DobbeltLenketListe() {
         //throw new UnsupportedOperationException();
         //this((T[]) new  Object[10]);
+        antall = 0;
+        endringer = 0;
+        hode = null;
+        hale = null;
+
     }
 
     public DobbeltLenketListe(T[] a) {
-        if (a == null)
-            throw new NullPointerException("Tabellen a er null!");
-        else if (a.length > 0) {
+        Objects.requireNonNull(a);
+
+        if (a.length > 0) {
             boolean first = true;
             antall = 0;
             int i = 0;for(; first && i < a.length; i++){
@@ -289,7 +294,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public boolean fjern(T verdi) {
-        if(!tom()) {
+        if(!tom() && verdi != null) {
             Node<T> currentNode = hode;
             while(currentNode.neste != null){
                 if(currentNode.verdi.equals(verdi)){
@@ -312,6 +317,27 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     public T fjern(int indeks) {
         indeksKontroll(indeks, false);
 
+        if(indeks == antall()-1){
+            T temp = hale.verdi;
+            hale = hale.forrige;
+            hale.neste = null;
+            return temp;
+        }else if(indeks == 0){
+            T temp = hode.verdi;
+            hode = hode.neste;
+            hode.forrige = null;
+            return temp;
+        }
+
+        Node<T> CurrentNode = hode;
+        for(int i = 0; i < indeks; i++){
+            if(CurrentNode.neste != null);
+            CurrentNode = CurrentNode.neste;
+        }
+
+        CurrentNode.forrige.neste = CurrentNode.neste;
+        CurrentNode.neste.forrige = CurrentNode.forrige;
+        return CurrentNode.verdi;
 
     }
 
