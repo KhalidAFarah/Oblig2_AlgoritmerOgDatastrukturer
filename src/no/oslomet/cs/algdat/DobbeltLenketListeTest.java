@@ -694,6 +694,7 @@ class DobbeltLenketListeTest {
             System.out.println("Oppgave 6ga: Feil returverdi i metoden fjern(indeks)!");
         }
 
+
         if (liste.antall() != 6) {
             antallFeil++;
             System.out.println("Oppgave 6gb: Feil i antall-oppdateringen i fjern(indeks)!");
@@ -741,7 +742,6 @@ class DobbeltLenketListeTest {
             antallFeil++;
             System.out.println("Oppgave 6kc: Skal fjerne første forekomst hvis flere like!");
         }
-
         liste.fjern("B");
 
         if (liste.fjern("F") != true

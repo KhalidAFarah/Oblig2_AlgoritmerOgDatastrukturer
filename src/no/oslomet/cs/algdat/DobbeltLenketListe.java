@@ -64,6 +64,11 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         liste5.leggInn(2, 4);
         System.out.println(liste5.toString());
 
+        System.out.println("------------------------------");
+        String[] s = {};
+        Liste<String> l = new DobbeltLenketListe<>(s);
+        l.fjern("");
+
 
     }
 
@@ -299,17 +304,37 @@ public class DobbeltLenketListe<T> implements Liste<T> {
             while(currentNode.neste != null){
                 if(currentNode.verdi.equals(verdi)){
                     if(currentNode.forrige == null && currentNode.neste != null){
+                        hode = currentNode.neste;
                         currentNode.neste.forrige = null;
-                    }else if(currentNode.forrige != null && currentNode.neste == null){
-                        currentNode.forrige.neste = null;
+                        currentNode.neste = null;
                     }else{
                         currentNode.neste.forrige = currentNode.forrige;
                         currentNode.forrige.neste = currentNode.neste;
                     }
+                    antall--;
+                    endringer++;
+                    return true;
+                }else{
+                    currentNode = currentNode.neste;
+                }
+            }if(hale.verdi.equals(verdi)){
+                if(antall() != 1) {
+                    hale = hale.forrige;
+                    hale.neste.forrige = null;
+                    hale.neste = null;
+                    antall--;
+                    endringer++;
+                    return true;
+                }else{
+                    hode = null;
+                    hale = hode;
+                    antall--;
+                    endringer++;
                     return true;
                 }
             }
         }
+
         return false;
     }
 
@@ -318,14 +343,28 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         indeksKontroll(indeks, false);
 
         if(indeks == antall()-1){
+            if(indeks == 0){
+                T temp = hode.verdi;
+                hode = null;
+                hale = hode;
+
+                antall--;
+                endringer++;
+                return temp;
+            }
+
             T temp = hale.verdi;
             hale = hale.forrige;
             hale.neste = null;
+            antall--;
+            endringer++;
             return temp;
         }else if(indeks == 0){
             T temp = hode.verdi;
             hode = hode.neste;
             hode.forrige = null;
+            antall--;
+            endringer++;
             return temp;
         }
 
@@ -337,6 +376,10 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
         CurrentNode.forrige.neste = CurrentNode.neste;
         CurrentNode.neste.forrige = CurrentNode.forrige;
+
+        antall--;
+        endringer++;
+
         return CurrentNode.verdi;
 
     }
