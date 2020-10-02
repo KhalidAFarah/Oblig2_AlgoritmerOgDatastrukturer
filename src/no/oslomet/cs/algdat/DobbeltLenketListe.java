@@ -392,7 +392,7 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public void nullstill() {
-        throw new UnsupportedOperationException();
+        
     }
 
     @Override
