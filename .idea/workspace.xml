@@ -159,7 +159,7 @@
       <workItem from="1601274937910" duration="15562000" />
       <workItem from="1601364033664" duration="8473000" />
       <workItem from="1601568962045" duration="108000" />
-      <workItem from="1601622150408" duration="1596000" />
+      <workItem from="1601622150408" duration="1881000" />
     </task>
     <servers />
   </component>
@@ -178,5 +178,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/no/oslomet/cs/algdat/DobbeltLenketListeTest.java</url>
+          <line>935</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

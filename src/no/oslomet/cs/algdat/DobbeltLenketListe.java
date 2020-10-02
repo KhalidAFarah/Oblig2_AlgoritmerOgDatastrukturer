@@ -405,6 +405,12 @@ public class DobbeltLenketListe<T> implements Liste<T> {
             antall--;
             endringer++;
         }
+        hale.verdi = null;
+        hale.forrige = null;
+        hode = null;
+        hale = hode;
+        antall--;
+        endringer++;
 
         //Måte Nr. 2
         /*while (antall > 0){
