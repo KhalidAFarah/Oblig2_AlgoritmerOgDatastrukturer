@@ -392,7 +392,11 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public void nullstill() {
-        
+        while (antall > 0){
+            fjern(0);
+            antall--;
+            endringer++;
+        }
     }
 
     @Override
