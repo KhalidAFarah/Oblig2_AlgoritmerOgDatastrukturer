@@ -411,11 +411,13 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         hale = hode;
         antall--;
         endringer++;
+    }
 
+    public void nullstill2(){
         //Måte Nr. 2
-        /*while (antall > 0){
+        while (antall > 0){
             fjern(0);
-        }*/
+        }
     }
 
     @Override

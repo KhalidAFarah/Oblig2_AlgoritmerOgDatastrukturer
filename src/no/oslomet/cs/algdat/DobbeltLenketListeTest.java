@@ -957,6 +957,28 @@ class DobbeltLenketListeTest {
         }
     }
 
+    //// tester raskeste nullstill ////////////////////////////
+    @org.junit.jupiter.api.Test
+    void testerRaskesteNullstill() {
+        DobbeltLenketListe<Integer> liste = new DobbeltLenketListe<>();
+        for(int i = 0; i < 1000; i++){
+            liste.leggInn(i);
+        }
+        long tid = System.currentTimeMillis();
+        liste.nullstill();
+        tid = System.currentTimeMillis() - tid;
+        System.out.println("Måte Nr. 1 brukte: " + tid);
+
+
+        for(int i = 0; i < 1000; i++){
+            liste.leggInn(i);
+        }
+        tid = System.currentTimeMillis();
+        liste.nullstill2();
+        tid = System.currentTimeMillis() - tid;
+        System.out.println("Måte Nr. 2 brukte: " + tid);
+    }
+
     //// Oppgave 8 ////////////////////////////
     @org.junit.jupiter.api.Test
     void oppgave8() {
