@@ -84,22 +84,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DobbeltLenketListeTest.oppgave5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Oblig2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="no.oslomet.cs.algdat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat" />
-      <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListeTest" />
-      <option name="METHOD_NAME" value="oppgave5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DobbeltLenketListeTest.oppgave6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Oblig2" />
       <extension name="coverage">
@@ -111,6 +95,22 @@
       <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat" />
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListeTest" />
       <option name="METHOD_NAME" value="oppgave6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DobbeltLenketListeTest.oppgave7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Oblig2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.oslomet.cs.algdat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat" />
+      <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.DobbeltLenketListeTest" />
+      <option name="METHOD_NAME" value="oppgave7" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,10 +135,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave8" />
+        <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave7" />
         <item itemvalue="Application.DobbeltLenketListe" />
         <item itemvalue="JUnit.DobbeltLenketListeTest" />
         <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave6" />
-        <item itemvalue="JUnit.DobbeltLenketListeTest.oppgave5" />
       </list>
     </recent_temporary>
   </component>
