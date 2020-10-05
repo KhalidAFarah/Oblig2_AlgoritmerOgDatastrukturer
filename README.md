@@ -56,15 +56,35 @@ For indekstil brukte jeg den generelle currentNode metode brukt oppe igjen i en 
 currentNode som startet fra hode sin verdi er lik den gitt og dersom dette blir true returnere oppgave en teller som 
 ble instansiert med verdi lik 0 utafor while løkken som for hver loop økes med en. dersom while løkken kjører igjennom
 hele listen uten å finne verdien returneres det etter while løkken -1. of inneholder returnerte jeg bare
-indekstil(verdi) != -1 slik at dersom indekstil fant verdien returneres true og false vis ikke.
+indekstil(T verdi) != -1 slik at dersom indekstil fant verdien returneres true og false vis ikke.
 
-* Oppgave 5
+* Oppgave 5:
+For legginn(int indeks,T verdi) teste jeg først og verdi er null. dersom indeks er lik antall eller 0 så blir de laget ny
+node som da er hode eller halen, men hvis indeks er et tall større enn 0 og mindre antall så bruker jeg finnNode(int indeks)
+metoden for å hente noden på indeksen og lager en ny node og endrer da referansen til neste og forrige for den nye noden
+og noden fra finnNode i tillegg økes antall og endringer. dersom den lenkede listen er tom så kalles bare legginn(T verdi)
+metoden der antall og endringer blir økt. Hvis dersom indeks var mindre en 0 og større enn antall kastes det en Exception.
 
+* Oppgave 6:
+Jeg implementerte fjern(T verdi) ved å først sjekke dersom listen er tom eller verdi er null hvis dette er true
+returneres det false. Dersom det returnere false kjøres det en while løkke som kjører gjennom listen og leter etter en
+node med lik verdi problemet med while løkken kjører til currentNode.neste == null som betyr at den ikke sjekker halen,
+derfor settet jeg opp if setning for halen og hvis den finner en node med like verdi returnere metoden true. For 
+fjern(int indeks) metoden tester først indeksen med indeks kontroll og deretter sjekker om indeksen viser til halen er
+hodet, hvis ikke kjøres det en for løkke til indeks for å fjerne noden og returnere den verdi og øke endringer og minke
+antall.
 
-* Oppgave 6
+* Oppgave 7:
+For metode nummer 1 kjører jeg igjennom listen med en while løkke for å minke antall, øke endringer, sette verdi til
+null og noden forrige til null og sett hode til å være neste (akkurat det samme som med currentNode). etter while løkken
+setter halen sin verdi lik null, minke antall, øke endringer og sette hales forrige node lik null. for metode nummer 2
+kjøres det en while løkke så lenge antall er større enn 0 og innenfor kalles det fjern for indeksen lik 0 der antall og
+endringer minkes og økes i metoden fjern. satte opp testerRaskesteNullstill() i test klassen for sjekke hvilken av metodene
+som er raskest.
 
-
-* Oppgave 7
-
-
-* Oppgave 8
+* Oppgave 8:
+For next() kastes det exceprions dersom iteratorendringer er lik endringer og hasNext() returnere false, hvis ikke
+settes fjernOk true og denne sin verdi skal returners og denne settes til denne.neste. For iterator metoden returneres
+det new DobbeltLenketListeIterator(). for 8c setter jeg denne til finnNode med parameteren indeks, og som den forrige
+konstruktøren setter fjernOk lik false og iteratorendringer lik endringer. iterator(int indeks) instansieres og
+returneres konstruktøren fra den forrige deloppgaven der parameteren indeks blir sendt inn i konstruktøren. 
