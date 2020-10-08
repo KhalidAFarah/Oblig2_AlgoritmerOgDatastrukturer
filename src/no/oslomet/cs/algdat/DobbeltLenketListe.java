@@ -11,73 +11,6 @@ import java.util.function.Predicate;
 
 
 public class DobbeltLenketListe<T> implements Liste<T> {
-
-
-    public static void main(String[] args){
-        String[] strings = {"kd","pe", "dt"};
-        DobbeltLenketListe<String> liste = new DobbeltLenketListe<>(strings);
-        System.out.println(liste.antall() + " " + liste.tom());
-        // Utskrift: 3 false
-
-
-        System.out.println(liste);
-        System.out.println(liste.omvendtString());
-
-        String[] s1 = {}, s2 = {"A"}, s3 = {null,"A",null,"B",null};
-        DobbeltLenketListe<String> l1 = new DobbeltLenketListe<>(s1);
-        DobbeltLenketListe<String> l2 = new DobbeltLenketListe<>(s2);
-        DobbeltLenketListe<String> l3 = new DobbeltLenketListe<>(s3);
-        System.out.println(l1.toString() + " " + l2.toString()
-                + " " + l3.toString() + " " + l1.omvendtString() + " "
-                + l2.omvendtString() + " " + l3.omvendtString());
-        // Utskrift: [] [A] [A, B] [] [A] [B, A]
-
-        l2.leggInn("A");
-        l3.leggInn("C");
-        System.out.println(l1.toString() + " " + l2.toString()
-                + " " + l3.toString() + " " + l1.omvendtString() + " "
-                + l2.omvendtString() + " " + l3.omvendtString());
-
-        DobbeltLenketListe<Integer> liste5 = new DobbeltLenketListe<>();
-        System.out.println(liste5.toString() + " " + liste5.omvendtString());
-        for (int i = 1; i <= 3; i++)
-        {
-            liste5.leggInn(i);
-            System.out.println(liste5.toString() + " " + liste5.omvendtString());
-        }
-        // Utskrift:
-        // [] []
-        // [1] [1]
-        // [1, 2] [2, 1]
-        // [1, 2, 3] [3, 2, 1]
-
-        System.out.println("-----------------------");
-        Character[] c = {'A','B','C','D','E','F','G','H','I','J',};
-        DobbeltLenketListe<Character> list = new DobbeltLenketListe<>(c);
-        System.out.println(list.subliste(3,8)); // [D, E, F, G, H]
-        System.out.println(list.subliste(5,5)); // []
-        System.out.println(list.subliste(8,list.antall())); // [I, J]
-        //System.out.println(liste.subliste(0,11)); // skal kaste unntak
-
-        System.out.println("-------------");
-        System.out.println(liste5.toString());
-        liste5.leggInn(2, 4);
-        System.out.println(liste5.toString());
-
-        System.out.println("------------------------------");
-        String[] navn = {"Lars","Anders","Bodil","Kari","Per","Berit"};
-        Liste<String> navnListe = new DobbeltLenketListe<>(navn);
-        navnListe.forEach(s -> System.out.print(s + " "));
-        System.out.println();
-        for (String s : navnListe) System.out.print(s + " ");
-        // Utskrift:
-        // Lars Anders Bodil Kari Per Berit
-        // Lars Anders Bodil Kari Per Berit
-
-
-
-    }
-
     /**
      * Node class
      * @param <T>
@@ -104,8 +37,6 @@ public class DobbeltLenketListe<T> implements Liste<T> {
     private int endringer;         // antall endringer i listen
 
     public DobbeltLenketListe() {
-        //throw new UnsupportedOperationException();
-        //this((T[]) new  Object[10]);
         antall = 0;
         endringer = 0;
         hode = null;
